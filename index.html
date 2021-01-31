@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input class="form-control" type="text">
-                    <button class="generate-btn">Generate Pin</button>
+                    <input id="pin" class="form-control" type="text">
+                    <button onclick="generatePin()" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
@@ -63,9 +63,16 @@
                 return pin;
             }
             else{
-                return getPin();
+              return getPin();
             }
+        } 
+
+        //display generate pin
+        function generatePin(){
+           const pinInput = document.getElementById('pin');
+           pinInput.value = getPin();
         }
-    </script>
+        
+   </script>
 </body>
 </html>
